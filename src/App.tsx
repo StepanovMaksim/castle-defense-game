@@ -53,38 +53,41 @@ function App() {
 
   return (
     <div>
-    <div className="App" style={{background: 'url(/background/background'+photoBack+'.png)'}}>
-      {modalStart && <ModalStart easy={() => dispatch(easyMode())} hard = {() => dispatch(hardMode())}/>}
-      <div className='click'>Нажатий: {totalClick}</div>
-      <Birds />
-      {lives > 0 ? 
-      <HeartRate totalHeart = {lives} /> : 
-      <ModalGameOver title1={'Вы проиграли!'} refresh={() => dispatch(refresh())}>
-        <h2>Ваше количество нажатий: {totalClick}</h2>
-        <h2>Наибольший вес ядра: {lvlCharge}</h2>
+      
+      <div className="App" style={{background: 'url(/background/background'+photoBack+'.png)'}}>
+        {modalStart && <ModalStart easy={() => dispatch(easyMode())} hard = {() => dispatch(hardMode())}/>}
+        <div className='click'>Нажатий: {totalClick}</div>
+        <Birds />
+        {lives > 0 ? 
+        <HeartRate totalHeart = {lives} /> : 
+        <ModalGameOver title1={'Вы проиграли!'} refresh={() => dispatch(refresh())}>
+          <h2>Ваше количество нажатий: {totalClick}</h2>
+          <h2>Наибольший вес ядра: {lvlCharge}</h2>
 
-      </ModalGameOver>}
-      <Guns 
-        fireNumber={animBumNum === 1 ? animCharge%6+1 : 1}
-        fireStyle='fire1'
-      />
-      <Guns 
-        fireNumber={animBumNum === 2 ? animCharge%6+1 : 1}
-        fireStyle='fire2'
-      />
-      <Guns 
-        fireNumber={animBumNum === 3 ? animCharge%6+1 : 1}
-        fireStyle='fire3'
-      />
-      <ChargeFinish />
+        </ModalGameOver>}
+        <Guns 
+          fireNumber={animBumNum === 1 ? animCharge%6+1 : 1}
+          fireStyle='fire1'
+        />
+        <Guns 
+          fireNumber={animBumNum === 2 ? animCharge%6+1 : 1}
+          fireStyle='fire2'
+        />
+        <Guns 
+          fireNumber={animBumNum === 3 ? animCharge%6+1 : 1}
+          fireStyle='fire3'
+        />
+        <ChargeFinish />
+        
+        {/* {isLoading && <h1>Идет загрузка</h1> }
+        {error && <h1>{error}</h1> }
+        {JSON.stringify(users, null, 2)} */}
+        
+      </div>
       
-      {/* {isLoading && <h1>Идет загрузка</h1> }
-      {error && <h1>{error}</h1> }
-      {JSON.stringify(users, null, 2)} */}
-      
-    </div>
     <Crocodile />
     <img className='castle' src={"/background/castle" + photo + ".png"} alt="" />
+    
     </div>
   );
 }

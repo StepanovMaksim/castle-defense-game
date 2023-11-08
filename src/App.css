@@ -146,7 +146,7 @@ body {
   user-select: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: first baseline;
   background-repeat: no-repeat;
   background-size: 100%;
   height: 100%;
