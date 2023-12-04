@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/castle-defense-game/static/css/main.9b1ca67b.css",
+    "main.js": "/castle-defense-game/static/js/main.b106936f.js",
+    "static/media/background5.png": "/castle-defense-game/static/media/background5.e9be6b3beb2a54789e1e.png",
+    "index.html": "/castle-defense-game/index.html",
+    "main.9b1ca67b.css.map": "/castle-defense-game/static/css/main.9b1ca67b.css.map",
+    "main.b106936f.js.map": "/castle-defense-game/static/js/main.b106936f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b1ca67b.css",
+    "static/js/main.b106936f.js"
+  ]
+}
